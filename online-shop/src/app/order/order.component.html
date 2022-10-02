@@ -1,0 +1,45 @@
+<div class="nav-bar-content">
+    <img src="../assets/logo.png" alt="#" class="logo" routerLink="/home" />
+    <ul class="nav-bar-list">
+      <li class="nav-bar-item">
+        <a routerLink="/home">Home</a>
+      </li>
+      <li class="nav-bar-item">
+        <a routerLink="/products" >Products</a>
+      </li>
+      <li class="nav-bar-item">
+        <a href="#">About</a>
+      </li>
+      <li class="nav-bar-item">
+        <mat-icon aria-hidden="false">search</mat-icon>
+      </li>
+      <li class="nav-bar-item">
+        <a routerLink="/login" (click)="authenticationService.logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="cart">
+    <div class="cart-header">
+        <h5>Your Shopping Cart</h5>
+        <div class="cart-content">
+            <table class="cart-table">
+                <tbody>
+                    <tr>
+                        <th colspan="2">Product</th>
+                        <th class="th-quantity">Quantity</th>
+                        <th class="th-price">Unitar Price</th>
+                        <th class="th-price">Total Price</th>
+                    </tr>
+                    <tr>
+                        <td class="ct-image"><img [src]="product.imageUrl" alt=""></td>
+                        <td class="ct-name"><a routerLink="/products/product/{{product.id}}">{{product.name}}</a></td>
+                        <td class="ct-quantity">1</td>
+                        <td class="ct-price">{{product.price}}$</td>
+                        <td class="ct-price">{{product.price}}$</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,363 @@
+<div class="nav-bar-content">
+    <img src="../assets/logo.png" alt="#" class="logo" />
+    <ul class="nav-bar-list">
+      <li class="nav-bar-item">
+        <a class="active" href="#">Home</a>
+      </li>
+      <li class="nav-bar-item">
+        <a routerLink="/products">Products</a>
+      </li>
+      <li class="nav-bar-item">
+        <a href="#">About</a>
+      </li>
+      <li class="nav-bar-item">
+        <mat-icon aria-hidden="false">search</mat-icon>
+      </li>
+      <li class="nav-bar-item">
+        <a routerLink="/login" *ngIf="!authenticationService.isUserLoggedIn()">Login</a>
+        <a routerLink="/login" *ngIf="authenticationService.isUserLoggedIn()" (click)="authenticationService.logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+ 
+  
+  <div class="banner-main">
+    <div >
+      <div class="container">
+        <div >
+          <div class="row">
+            <div>
+              <div class="text-bg">
+                <span>Computer And Laptop</span>
+                <h1>Accessories</h1>
+                <div class="image-div">
+                  <div class="text">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Minus, odit magni pariatur est doloremque, aperiam magnam
+                      consequuntur reprehenderit at maiores facere modi quam cum?
+                      Vero excepturi soluta repellendus dolores! Odit?
+                    </p>
+                  </div>
+                  <img src="../assets/pct.png" alt="" />
+                </div>
+                <a routerLink="/products">Buy Now</a>
+                <a href="#contact">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  
+
+  
+  <div class="three-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-box">
+          <mat-card class="card">
+            <div class="box">
+              <img mat-card-image src="../assets/thr.png" class="card-image" />
+            </div>
+            <div class="card-title">
+              <mat-card-title>Computer</mat-card-title>
+            </div>
+            <mat-card-content>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don't look even
+                slightly believable.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-box">
+          <mat-card class="card">
+            <div class="box">
+              <img mat-card-image src="../assets/thr1.png" class="card-image" />
+            </div>
+            <div class="card-title">
+              <mat-card-title>Laptop</mat-card-title>
+            </div>
+            <mat-card-content>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don't look even
+                slightly believable.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-box">
+          <mat-card class="card">
+            <div class="box">
+              <img mat-card-image src="../assets/thr2.png" class="card-image" />
+            </div>
+            <div class="card-title">
+              <mat-card-title>Tablet</mat-card-title>
+            </div>
+            <mat-card-content>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don't look even
+                slightly believable.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="products">
+    <div class="our-products">
+      <h2>Our Products</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-box">
+          <figure><img src="../assets/product1.png" alt="" /></figure>
+          <h3>Keyboard</h3>
+        </div>
+        <div class="col-box">
+          <figure><img src="../assets/product2.png" alt="" /></figure>
+          <h3>Mouse</h3>
+        </div>
+        <div class="col-box">
+          <figure><img src="../assets/unitate.jpg"  alt="" /></figure>
+          <h3 class="unitate-pc">Computer</h3>
+        </div>
+        <div class="col-box">
+          <figure><img src="../assets/product4.png" alt="" /></figure>
+          <h3>Speaker</h3>
+        </div>
+        <div class="col-box">
+          <figure><img src="../assets/product5.png" alt="" /></figure>
+          <h3>Router</h3>
+        </div>
+        <div class="col-box">
+          <figure><img src="../assets/product6.png" alt="" /></figure>
+          <h3>Hard Disk Drive</h3>
+        </div>
+        <div class="col-box">
+          <figure><img src="../assets/product7.png" alt="" /></figure>
+          <h3>Ram</h3>
+        </div>
+        <div class="col-box">
+          <figure><img src="../assets/headset.jpg" alt="" class="headset-img" /></figure>
+          <h3 class="headset">Headset</h3>
+        </div>
+        <div class="col-box">
+          <figure>
+            <img src="../assets/product9.jpg" alt="" class="ssd-image" />
+          </figure>
+          <h3 class="ssd-header">SSD</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="col-box">
+          <a routerLink="/products" class="see-more">See More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="pc">
+    <div class="container">
+      <div class="row">
+        <div class="col-box">
+          <div class="titlepage">
+            <p>Every Computer and Laptop</p>
+            <h2>Up to 40% off !</h2>
+            <a routerLink="/products" class="shop-now">Shop Now</a>
+          </div>
+        </div>
+        <div class="col-box">
+          <figure><img src="../assets/pc.png" alt="" /></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="review">
+    <div class="customer">
+      <h2>Customer Reviews</h2>
+    </div>
+  </div>
+  
+  <div class="three-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-box">
+          <mat-card class="card">
+            <mat-card-title
+              ><img src="../assets/cos.png" alt=""
+            /></mat-card-title>
+            <mat-card-subtitle>John Trombon</mat-card-subtitle>
+            <p>
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id
+            </p>
+          </mat-card>
+        </div>
+        <div class="col-box">
+          <mat-card class="card">
+            <mat-card-title
+              ><img src="../assets/cos.png" alt=""
+            /></mat-card-title>
+            <mat-card-subtitle>Michael Douglas</mat-card-subtitle>
+            <p>
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id
+            </p>
+          </mat-card>
+        </div>
+        <div class="col-box">
+          <mat-card class="card">
+            <mat-card-title
+              ><img src="../assets/cos.png" alt=""
+            /></mat-card-title>
+            <mat-card-subtitle>Maggie Glenn</mat-card-subtitle>
+            <p>
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id
+            </p>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="contact-wrap">
+    <div class="contact" id="contact">
+      <div class="container">
+        <div class="title-row">
+          <div>
+            <div class="titlepage">
+              <h2>Contact Now</h2>
+            </div>
+          </div>
+        </div>
+        <div class="form-content">
+          <div>
+            <div>
+              <form id="request" class="main_form">
+                <div>
+                  <div>
+                    <input type="text" class="contactus" placeholder="Name" />
+                  </div>
+                  <div>
+                    <input type="email" class="contactus" placeholder="Email" />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      class="contactus"
+                      placeholder="Phone Number"
+                    />
+                  </div>
+                  <div>
+                    <textarea
+                      class="textarea"
+                      placeholder="Message"
+                      type="text"
+                      message="Name"
+                    ></textarea>
+                  </div>
+                  <div class="btn-div">
+                    <button mat-raised-button type="submit" class="btn">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-container">
+    <div class="footer">
+      <div class="footer-image">
+        <img src="../assets/logo1.png" class="logo1" alt="" />
+      </div>
+      <div class="footer-heading">
+        <h2>Social Media</h2>
+        <ul class="social_icon">
+          <li>
+            <a href="#">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-heading foother-1">
+        <h2>About Us</h2>
+        <a href="#">Blog</a>
+        <a href="#">Demo</a>
+        <a href="#">Customers</a>
+        <a href="#">Investors</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-heading footer-2">
+        <h2>Contact Us</h2>
+        <a href="#">Jobs</a>
+        <a href="#">Support</a>
+        <a href="#">Contact</a>
+        <a href="#">Sponsorships</a>
+      </div>
+      <div class="footer-email-form">
+        <h2>Join our newsletter</h2>
+        <input
+          type="email"
+          id="footer-email"
+          placeholder="Enter your email address"
+        />
+        <input type="submit" value="Subscribe" id="footer-email-btn" />
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="copyright-container">
+        <div class="row">
+          <div>
+            <p>© 2022 All Rights Reserved. Designed by Mihai Neamtiu</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

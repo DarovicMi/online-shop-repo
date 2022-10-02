@@ -1,0 +1,47 @@
+<div class="nav-bar-content">
+  <img src="../assets/logo.png" alt="#" class="logo" routerLink="/home" />
+  <ul class="nav-bar-list">
+    <li class="nav-bar-item">
+      <a routerLink="/home">Home</a>
+    </li>
+    <li class="nav-bar-item">
+      <a routerLink="/products" class="active">Products</a>
+    </li>
+    <li class="nav-bar-item">
+      <a href="#">About</a>
+    </li>
+    <li class="nav-bar-item">
+      <mat-icon aria-hidden="false">search</mat-icon>
+    </li>
+    <li class="nav-bar-item">
+      <a routerLink="/login" (click)="authenticationService.logout()">Logout</a>
+    </li>
+    <li class="nav-bar-item">
+      <app-cart-status></app-cart-status>
+    </li>
+  </ul>
+</div>
+
+
+<div class="main-content">
+  <div class="container">
+    <div class="row">
+      <div class="col" *ngFor="let product of products">
+        <img [src]= product.imageUrl alt="" class="product-image" routerLink="product/{{product.id}}">
+        <div class="product-description">
+          <p routerLink="product/{{product.id}}">{{product.name}}</p>
+        </div>
+        <div class="product-stock">
+          <h6>Stock: <span>{{product.unitsInStock}}</span></h6>
+        </div>
+        <div class="product-price">
+          <span class="price">Price: </span>
+          <span class="price-value">{{product.price}}$</span>
+        </div>
+        <div class="product-buy">
+          <button type="button" class="btn btn-success" (click)="addProductToCart(product)">Buy Now</button>
+        </div>
+      </div>     
+    </div>  
+    
+<app-footer></app-footer>

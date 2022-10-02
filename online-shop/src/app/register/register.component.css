@@ -1,0 +1,125 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+* {
+    box-sizing: content-box;
+}
+
+
+
+    /* NAVBAR */
+
+ .logo {
+        padding-left: 35px;
+        cursor: pointer;
+        margin-bottom: 20px;
+     }
+  .nav-bar-content {
+    background:url("../images/banner.jpg");
+    overflow: hidden;
+    padding-top: 20px;
+  }
+  .nav-bar-item {
+    display: inline-block;
+    padding: 0px 13px;
+
+  }
+  .nav-bar-list {
+    float: right;
+    margin-bottom: 15px;
+  }
+
+
+  .nav-bar-content a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .nav-bar-content a:hover {
+    color: lightgreen;
+  }
+  .nav-bar-content a.active {
+    color: lightgreen;
+  }
+
+  mat-icon {
+    font-size: 27.5px;
+    color: #fff; 
+    float: left;
+    line-height: 7px;
+    cursor: pointer;
+}
+mat-icon:hover {
+    color: lightgreen;
+    transition: ease-in all .3s;
+}
+
+/* Form */
+
+  .nav {
+    padding-top: 30px;
+    display: table; 
+    margin: 0 auto;
+    text-align: left;
+  }
+  .nav-link {
+    display: inline-block ;
+    width: 80px !important;
+  }
+  .nav-item {
+    text-align: center !important;
+  }
+  .form-control {
+    width: auto;
+  }
+  .container-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .form-group {
+    padding-top: 10px;
+  }
+  .terms {
+    padding-top: 20px;
+  }
+  .checkbox-input {
+    cursor: pointer;
+  }
+  /* Fields */
+
+  .password-icon {
+    color: gray;
+    height: auto;
+    width: 15px;
+    line-height: 1px;
+    font-size: 25px;
+    position: relative;
+    top: -20px;
+  }
+  .password-icon:hover {
+    color:lightgray;
+    transition: .4s;
+  }
+  .password-div {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .form-label::after {
+    content: '*';
+    padding-left: 5px;
+    color: red;
+  }
+  .form-check-label::before {
+    content: '*';
+    color: red;
+  }
+  .alert {
+    margin-top: 10px;
+    width: 175px;
+  }

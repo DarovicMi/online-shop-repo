@@ -1,0 +1,170 @@
+<div class="nav-bar-content">
+    <img src="../assets/logo.png" alt="#" class="logo" routerLink="/home" />
+    <ul class="nav-bar-list">
+      <li class="nav-bar-item">
+        <a routerLink="/home">Home</a>
+      </li>
+      <li class="nav-bar-item">
+        <a routerLink="/products">Products</a>
+      </li>
+      <li class="nav-bar-item">
+        <a href="#">About</a>
+      </li>
+      <li class="nav-bar-item">
+        <mat-icon aria-hidden="false">search</mat-icon>
+      </li>
+      <li class="nav-bar-item">
+        <a routerLink="/register" class="active">Register</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Pills navs -->
+<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link"
+        id="tab-login"
+        data-mdb-toggle="pill"
+        routerLink="/login"
+        role="tab"
+        aria-controls="pills-login"
+        aria-selected="false"
+        >Login</a
+      >
+    </li>
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link active"
+        id="tab-register"
+        data-mdb-toggle="pill"
+        routerLink="/register"
+        role="tab"
+        aria-controls="pills-register"
+        aria-selected="true"
+        >Register</a
+      >
+    </li>
+  </ul>
+  <!-- Pills navs -->
+
+<div class="container-div">
+    <form [formGroup]="registerForm">
+        <div class="text-center mb-3 ">
+          <p>Sign up with:</p>
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fa fa-facebook-f"></i>
+          </button>
+    
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fa fa-google"></i>
+          </button>
+    
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fa fa-twitter"></i>
+          </button>
+    
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fa fa-github"></i>
+          </button>
+        </div>
+    
+        <p class="text-center">or</p>
+    
+    
+        <!-- Username input -->
+        <div class="form-group">
+        <label class="form-label" for="registerUsername">Username</label>
+          <input type="text" id="registerUsername" class="form-control" formControlName="username" />
+            <div class="alert alert-danger" *ngIf="registerField?.['username'].touched && registerField?.['username'].errors?.['required']">
+              Username is required !
+          </div>
+          <div class="alert alert-danger" *ngIf="registerField?.['username'].errors?.['minlength']">
+            Username is too short !
+          </div>
+          <div class="alert alert-danger" *ngIf="registerField?.['username'].errors?.['maxlength']">
+            Username is too long !
+          </div>
+
+        </div>
+    
+        <!-- Email input -->
+        <div class="form-group">
+        <label class="form-label" for="registerEmail">Email</label>
+          <input type="email" id="registerEmail" class="form-control" formControlName="email" />
+          <div class="alert alert-danger" *ngIf="registerField?.['email'].touched && registerField?.['email'].errors?.['required']">
+            Email is required !
+          </div>
+          <div class="alert alert-danger" *ngIf="registerField?.['email'].errors?.['email']">
+            Not a valid email !
+          </div>
+        </div>
+    
+        <!-- Password input -->
+        <div class="form-group">
+            <label class="form-label" for="registerPassword">
+                Password
+            </label>
+          <input [type]="hide ? 'text' : 'password'" id="registerPassword" class="form-control" formControlName="password" /> 
+          <div class="alert alert-danger" *ngIf="registerField?.['password'].touched && registerField?.['password'].errors?.['required']">
+            Password is required !
+          </div> 
+          <div class="alert alert-danger" *ngIf="registerField?.['password'].errors?.['minlength']">
+            Password is too short !
+          </div> 
+          <div class="alert alert-danger" *ngIf="registerField?.['password'].errors?.['maxlength']">
+            Password is too long !
+          </div> 
+        </div>
+        <div class="password-div">
+            <mat-icon class="password-icon" (click)="hide = !hide">{{
+                hide ? "visibility" : "visibility_off"
+              }}</mat-icon>
+        </div>
+    
+        <!-- Repeat Password input -->
+
+        <div class="form-group">
+            <label class="form-label" for="registerRepeatPassword"
+            >Repeat password</label>
+          <input
+            [type]="hide ? 'text' : 'password'"
+            id="registerRepeatPassword"
+            class="form-control"
+            formControlName="confirmPassword"
+          />
+          <div class="alert alert-danger" *ngIf="registerField?.['confirmPassword'].touched && registerField?.['confirmPassword'].errors?.['required']">
+            Confirming password is required !
+          </div> 
+          <div class="alert alert-danger" *ngIf="registerField?.['confirmPassword'].errors?.['mustMatch']">
+            Passwords do not match !
+          </div>
+        </div>
+    
+        <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4 terms">
+          <input
+            class="form-check-input me-2 checkbox-input"
+            type="checkbox"
+            name="checkbox"
+            id="registerCheck"
+            aria-describedby="registerCheckHelpText"
+            formControlName="checkbox"
+            required
+            />
+          <label class="form-check-label" for="registerCheck">
+            I have read and agree to the terms
+          </label>
+        </div>
+    
+        <!-- Submit button -->
+        <div class="container-div">
+            <button type="submit" class="btn btn-primary btn-block mb-3" [disabled]="registerForm.invalid" (click)="register()">
+              Sign up
+            </button>
+        </div>
+      </form>
+</div>
+
+<app-footer></app-footer>
+  

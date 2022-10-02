@@ -1,0 +1,101 @@
+<div class="nav-bar-content">
+  <img src="../assets/logo.png" alt="#" class="logo" routerLink="/home" />
+  <ul class="nav-bar-list">
+    <li class="nav-bar-item">
+      <a routerLink="/home">Home</a>
+    </li>
+    <li class="nav-bar-item">
+      <a routerLink="/products">Products</a>
+    </li>
+    <li class="nav-bar-item">
+      <a href="#">About</a>
+    </li>
+    <li class="nav-bar-item">
+      <mat-icon aria-hidden="false">search</mat-icon>
+    </li>
+    <li class="nav-bar-item">
+      <a routerLink="/login" (click)="authenticationService.logout()">Logout</a>
+    </li>
+    <li class="nav-bar-item">
+      <app-cart-status></app-cart-status>
+    </li>
+  </ul>
+</div>
+
+<div class="cart">
+  <div class="cart-header" *ngIf="totalQuantity > 0">
+    <h5>Your Shopping Cart</h5>
+    <div class="cart-content">
+      <table class="cart-table">
+        <tbody>
+          <tr>
+            <th colspan="2">Product</th>
+            <th class="th-quantity">Quantity</th>
+            <th class="th-price">Unitar Price</th>
+            <th class="th-price">Subtotal Price</th>
+          </tr>
+          <tr *ngFor="let cartItem of cartItems">
+            <td class="ct-image"><img [src]="cartItem.imageUrl" alt="" /></td>
+            <td class="ct-name">
+              <a routerLink="/products">{{ cartItem.name }}</a>
+            </td>
+            <td class="ct-quantity">
+              <div class="row no-gutters">
+                <div class="col">
+                  <button
+                    class="btn btn-plus btn-primary btn-sm"
+                    (click)="incrementQuantity(cartItem)"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+                <div>
+                  {{ cartItem.quantity }}
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-minus btn-primary btn-sm"
+                    (click)="decrementQuantity(cartItem)"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                </div>
+                <div class="btn-remove-div">
+                  <button
+                    class="btn btn-primary btn-remove"
+                    (click)="remove(cartItem)"
+                  >
+                    Remove
+                  </button>
+                </div>
+                <div class="col-8"></div>
+              </div>
+            </td>
+            <td class="ct-price">{{ cartItem.price | currency: "USD" }}</td>
+            <td class="ct-price">
+              {{ cartItem.quantity * cartItem.price | currency: "USD" }}
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="table-data">
+              <p>Total Quantity: {{ totalQuantity }}</p>
+              <p>Shipping: FREE</p>
+              <p>Total Price: {{ totalPrice | currency: "USD" }}</p>
+              <a routerLink="/checkout" class="btn btn-primary">Checkout</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    class="alert alert-warning col-md-12"
+    role="alert"
+    *ngIf="totalQuantity === 0"
+  >
+    <span>Your shopping cart is empty.</span>
+  </div>
+</div>

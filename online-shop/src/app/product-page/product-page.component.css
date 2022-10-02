@@ -1,0 +1,129 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+* {
+    box-sizing: border-box !important;
+}
+
+div {
+    display: block;
+}
+
+    /* NAVBAR */
+
+ .logo {
+        padding-left: 35px;
+        cursor: pointer;
+        margin-bottom: 20px;
+     }
+  .nav-bar-content {
+    background:url("../images/banner.jpg");
+    overflow: hidden;
+    padding-top: 20px;
+  }
+  .nav-bar-item {
+    display: inline-block;
+    padding: 0px 13px;
+
+  }
+  .nav-bar-list {
+    float: right;
+    margin-bottom: 15px;
+  }
+
+
+  .nav-bar-content a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .nav-bar-content a:hover {
+    color: lightgreen;
+  }
+  .nav-bar-content a.active {
+    color: lightgreen;
+  }
+
+  mat-icon {
+    font-size: 27.5px;
+    color: #fff; 
+    float: left;
+    line-height: 7px;
+    cursor: pointer;
+}
+mat-icon:hover {
+    color: lightgreen;
+    transition: ease-in all .3s;
+}
+
+/* Container */
+
+.container-div {
+    padding-top: 120px;
+}
+ .product-header {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.product-name {
+    padding-top: 20px;
+    text-align: left;
+}
+.product-image {
+    width: 170px;
+}
+
+.buy-product {
+    padding-top: 30px;
+}
+.specifications {
+  padding-top: 30px;
+}
+.tech {
+  border-bottom: lightgray 1px solid;
+}
+.tech-description {
+  padding-top: 20px;
+}
+.tech-description span {
+  display: inline-block;
+}
+.tech-table tr {
+  padding-top: 10px;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+.general {
+  background-color: #eeeeee;
+    font-weight: 700;
+    padding-left: 5px;
+    border-bottom: none;
+}
+.tech-table {
+  width: 100%;
+  max-width: 100%;
+}
+table {
+  background-color: transparent;
+}
+
+table td {
+  font-size: 13px;
+  padding: 3px 6px;
+  color: #333333;
+  border-top: none;
+}
+.borderr {
+  padding-top: 5px;
+  border-bottom: 1px solid lightgray;
+}

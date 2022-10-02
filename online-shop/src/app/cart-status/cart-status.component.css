@@ -1,0 +1,26 @@
+.fa {
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+}
+.total {
+    color: #fff;
+    padding-right: 15px;
+}
+.cart-area {
+    position: relative;
+    top: -17px;
+}
+.total span {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+i:hover {
+    transition: ease-in all .3s;
+    color: lightgreen;
+}

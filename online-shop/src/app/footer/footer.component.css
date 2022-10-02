@@ -1,0 +1,142 @@
+.footer-container {
+    background:url("../images/footer.jpg");
+   padding-top: 40px;
+}
+
+.space {
+    padding-top: 40px;
+}
+
+.footer {
+    max-width: fit-content;
+    height: 25vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+.footer-heading h2 {
+    margin-bottom: 2rem;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+.footer-heading a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+.footer-heading a:hover {
+    color: red;
+    transition: .3s ease-out;
+}
+.footer-email-form h2 {
+    margin-bottom: 2rem;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+#footer-email {
+    width: 250px;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+#footer-email::placeholder {
+    color: #b1b1b1;
+}
+#footer-email-btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #F9423D;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+}
+#footer-email-btn:hover {
+    cursor: pointer;
+    background-color: #337AF1;
+    transition: all 0.3s ease-out;
+}
+.footer-image {
+padding-right: 100px;
+}
+.logo1 {
+    text-align: left;
+    padding-top: 30px;
+}
+ul.social_icon {
+    width: 100%;
+}
+
+ul.social_icon li {
+    display: block;
+    padding-top: 7px;
+}
+
+ul.social_icon li a {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-radius: 30px;
+    margin: 0 3px;
+    text-decoration: none;
+    transition: ease-in all .3s;
+}
+
+ul.social_icon li a:hover {
+    background: red;
+}
+
+.fa {
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #252525;
+}
+
+
+ul, li, ol {
+    list-style: none;
+}
+
+/* Copyright */
+.copyright {
+    margin-top: 80px;
+    padding-bottom: 20px;
+}
+.copyright p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border-top: #ddd solid 1px;
+    padding-top: 25px;
+    font-weight: normal;
+}
+.copyright-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

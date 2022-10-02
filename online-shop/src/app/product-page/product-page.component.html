@@ -1,0 +1,98 @@
+<div class="nav-bar-content">
+    <img src="../assets/logo.png" alt="#" class="logo" routerLink="/home" />
+    <ul class="nav-bar-list">
+      <li class="nav-bar-item">
+        <a routerLink="/home">Home</a>
+      </li>
+      <li class="nav-bar-item">
+        <a routerLink="/products" class="active">Products</a>
+      </li>
+      <li class="nav-bar-item">
+        <a href="#">About</a>
+      </li>
+      <li class="nav-bar-item">
+        <mat-icon aria-hidden="false">search</mat-icon>
+      </li>
+      <li class="nav-bar-item">
+        <a routerLink="/login" (click)="authenticationService.logout()">Logout</a>
+      </li>
+      <li class="nav-bar-item">
+        <app-cart-status></app-cart-status>
+      </li>
+    </ul>
+  </div>
+
+  <div class="product-header">
+      <h6>{{product.name}}</h6>
+  </div>
+  <div class="container-div">
+    <div class="container">
+        <div class="row">
+            <div class="col product-image-border">
+                <img [src]="product.imageUrl" alt="Corsair Sabre Pro Gaming Mouse" class="product-image">
+            </div>
+            <div class="col">
+                <h6>Category: {{product.category.categoryName}}</h6>
+                <h6>Units in stock: {{product.unitsInStock}}</h6>
+                <h6>Price: {{product.price}}$</h6>
+                <div class="buy-product">
+                    <button type="submit" class="btn btn-primary" (click)="addProductToCart()">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="specifications">  
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="tech">
+              <h6>Technical Specifications</h6>
+            </div>
+            <div class="tech-description">
+              <table class="tech-table">
+                <tbody>
+                  <tr>
+                    Name
+                    <td>
+                      {{product.name}}
+                    </td>
+                  </tr>
+                  <tr>Producer
+                    <td>{{product.producer}}</td>
+                  </tr>
+                  <tr>Warrant
+                    <td>24 months</td>
+                  </tr>
+                  <tr class="general">General</tr>
+                  <tr>Mouse Type
+                    <td>Wired</td>
+                  </tr>
+                  <tr>Interface
+                    <td>USB</td>
+                  </tr>
+                  <tr>Technology
+                      <td>Optic</td>
+                  </tr>
+                  <tr>DPI
+                    <td>18000</td>
+                  </tr>
+                  <tr>Buttons
+                    <td>6</td>
+                  </tr>
+                  <tr>Color
+                    <td>Black</td>
+                  </tr>       
+                </tbody>
+              </table>
+            </div>
+            <div class="borderr">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
